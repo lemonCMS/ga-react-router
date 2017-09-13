@@ -1,5 +1,6 @@
 'use strict';
 if(typeof window !== 'undefined' && typeof GA_TRACKING_CODE !== 'undefined') {
+  var gaScriptUrl = typeof GA_SCRIPT_URL === 'undefined' ? '//www.google-analytics.com/analytics.js' : GA_SCRIPT_URL;
   (function(window, document, script, url, r, tag, firstScriptTag) {
     window['GoogleAnalyticsObject']=r;
     window[r] = window[r] || function() {
@@ -15,7 +16,7 @@ if(typeof window !== 'undefined' && typeof GA_TRACKING_CODE !== 'undefined') {
     window,
     document,
     'script',
-    '//www.google-analytics.com/analytics.js',
+    gaScriptUrl,
     'ga'
   );
 
